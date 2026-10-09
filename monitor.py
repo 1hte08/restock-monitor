@@ -13,6 +13,8 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (restock-monitor)"}
 # 要監控的商品網址，之後想加就往下加
 PRODUCTS = [
     "https://hello82.com/products/signed-tws-tws-2nd-single-album-to-us",
+    "https://shop.kpopnara.com/collections/home-page/products/tws-2nd-single-album-to-us-closer-ver-signed",
+    "https://shop.kpopnara.com/collections/home-page/products/tws-2nd-single-album-to-us-beyond-ver-signed",
 ]
 
 
