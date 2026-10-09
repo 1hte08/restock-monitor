@@ -35,7 +35,9 @@ def notify(title, variant_name, link):
     if not WEBHOOK_URL:
         print("沒有設定 DISCORD_WEBHOOK_URL，略過通知")
         return
-    mention = f"<@{MENTION_USER_ID}> " if MENTION_USER_ID else ""
+    ids = [i.strip() for i in MENTION_USER_ID.split(",") if i.strip()]
+    parts = ["@everyone" if i.lower() == "everyone" else f"<@{i}>" for i in ids]
+    mention = " ".join(parts) + " " if parts else ""
     content = f"{mention}🔔 **補貨了！**\n{title}（{variant_name}）\n{link}"
     requests.post(WEBHOOK_URL, json={"content": content}, timeout=20).raise_for_status()
 
