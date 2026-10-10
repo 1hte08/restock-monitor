@@ -19,6 +19,8 @@ HEADERS = {
 # Shopify 商品（網址格式：網站/products/商品名）
 SHOPIFY_PRODUCTS = [
     "https://hello82.com/products/signed-tws-tws-2nd-single-album-to-us",
+    "https://shop.kpopnara.com/collections/home-page/products/tws-2nd-single-album-to-us-closer-ver-signed",
+    "https://shop.kpopnara.com/collections/home-page/products/tws-2nd-single-album-to-us-beyond-ver-signed",
 ]
 
 # Weverse Shop 商品
