@@ -96,7 +96,7 @@ def main():
         for vid, info in variants.items():
             key = f"{url}#{vid}"
             was_available = state.get(key, False)
-            if info["available"] and not was_available:
+            if True:
                 try:
                     notify(title, info["name"], info["link"])
                     print(f"已通知：{title} / {info['name']}")
