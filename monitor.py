@@ -21,6 +21,9 @@ SHOPIFY_PRODUCTS = [
     "https://hello82.com/products/signed-tws-tws-2nd-single-album-to-us",
     "https://shop.kpopnara.com/collections/home-page/products/tws-2nd-single-album-to-us-closer-ver-signed",
     "https://shop.kpopnara.com/collections/home-page/products/tws-2nd-single-album-to-us-beyond-ver-signed",
+    "https://hello82.com/products/signed-ateez-golden-hour-part-6-digipack",
+    "https://hello82.com/products/signed-ateez-golden-hour-part-6-digipack-unit",
+    "https://hello82.com/products/signed-ateez-golden-hour-part-6",
 ]
 
 # Weverse Shop 商品
