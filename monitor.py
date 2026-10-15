@@ -2,6 +2,8 @@
 import json
 import os
 import re
+import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
@@ -83,13 +85,39 @@ def notify(title, variant_name, link):
     requests.post(WEBHOOK_URL, json={"content": content}, timeout=20).raise_for_status()
 
 
+def get_jobs():
+    jobs = [(check_shopify, u) for u in SHOPIFY_PRODUCTS]
+    jobs += [(check_weverse, u) for u in WEVERSE_PRODUCTS]
+    return jobs
+
+
+def summary():
+    """每日狀態表：列出所有商品目前有貨或售完，不會動到 state.json。"""
+    lines = []
+    for fn, url in get_jobs():
+        try:
+            title, variants = fn(url)
+        except Exception as e:
+            lines.append(f"⚠️ 抓取失敗｜{url}")
+            print(f"抓取失敗 {url}: {e}")
+            continue
+        for info in variants.values():
+            icon = "✅ 有貨" if info["available"] else "❌ 售完"
+            lines.append(f"{icon}｜{title}（{info['name']}）")
+
+    now = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M")
+    content = f"📋 **商品狀態表**（台灣時間 {now}）\n" + "\n".join(lines)
+    print(content)
+    if not WEBHOOK_URL:
+        print("沒有設定 DISCORD_WEBHOOK_URL，略過通知")
+        return
+    requests.post(WEBHOOK_URL, json={"content": content[:1900]}, timeout=20).raise_for_status()
+
+
 def main():
     state = json.loads(STATE_FILE.read_text()) if STATE_FILE.exists() else {}
 
-    jobs = [(check_shopify, u) for u in SHOPIFY_PRODUCTS]
-    jobs += [(check_weverse, u) for u in WEVERSE_PRODUCTS]
-
-    for fn, url in jobs:
+    for fn, url in get_jobs():
         try:
             title, variants = fn(url)
         except Exception as e:
@@ -113,4 +141,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) > 1 and sys.argv[1] == "summary":
+        summary()
+    else:
+        main()
