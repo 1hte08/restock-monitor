@@ -3,6 +3,7 @@ name: daily-summary
 on:
   schedule:
     # 台灣時間晚上 10 點 = UTC 14:00
+    - cron: "0 4 * * *"
     - cron: "0 14 * * *"
   workflow_dispatch:
 
