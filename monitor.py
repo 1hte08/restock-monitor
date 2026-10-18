@@ -31,6 +31,7 @@ SHOPIFY_PRODUCTS = [
 # Weverse Shop 商品
 WEVERSE_PRODUCTS = [
     "https://shop.weverse.io/zh-tw/shop/USD/artists/255/sales/66914",
+    ”https://share.weverseshop.io/static/shares/sale/52097”,
 ]
 
 # 頁面上出現這些字就視為售完
