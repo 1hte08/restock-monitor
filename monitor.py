@@ -25,7 +25,6 @@ SHOPIFY_PRODUCTS = [
     "https://shop.kpopnara.com/collections/home-page/products/tws-2nd-single-album-to-us-beyond-ver-signed",
     "https://hello82.com/products/signed-ateez-golden-hour-part-6-digipack",
     "https://hello82.com/products/signed-ateez-golden-hour-part-6-digipack-unit",
-    "https://hello82.com/products/signed-ateez-golden-hour-part-6",
 ]
 
 # Weverse Shop 商品
@@ -33,6 +32,7 @@ WEVERSE_PRODUCTS = [
     "https://shop.weverse.io/zh-tw/shop/KRW/artists/255/sales/66914",
     "https://shop.weverse.io/zh-tw/shop/KRW/artists/112/sales/52097",
     "https://shop.weverse.io/zh-tw/shop/KRW/artists/112/sales/70127",
+    "https://shop.weverse.io/zh-tw/shop/KRW/artists/112/sales/52097",
 ]
 
 # 頁面上出現這些字就視為售完
