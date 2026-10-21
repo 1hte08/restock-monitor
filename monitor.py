@@ -32,6 +32,7 @@ SHOPIFY_PRODUCTS = [
 WEVERSE_PRODUCTS = [
     "https://shop.weverse.io/zh-tw/shop/KRW/artists/255/sales/66914",
     "https://shop.weverse.io/zh-tw/shop/KRW/artists/112/sales/52097",
+    "https://shop.weverse.io/zh-tw/shop/KRW/artists/112/sales/70127",
 ]
 
 # 頁面上出現這些字就視為售完
