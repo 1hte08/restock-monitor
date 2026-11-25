@@ -34,7 +34,7 @@ WEVERSE_PRODUCTS = [
     "https://shop.weverse.io/zh-tw/shop/KRW/artists/112/sales/70127",
     "https://shop.weverse.io/zh-tw/shop/KRW/artists/112/sales/52097",
     "https://shop.weverse.io/zh-tw/shop/KRW/artists/165/sales/72064",
-    "https://shop.weverse.io/zh-tw/shop/USD/artists/255/sales/74753",
+    "https://shop.weverse.io/zh-tw/shop/KRW/artists/255/sales/74753",
 ]
 
 # 頁面上出現這些字就視為售完
