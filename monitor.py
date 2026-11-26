@@ -25,6 +25,7 @@ SHOPIFY_PRODUCTS = [
     "https://shop.kpopnara.com/collections/home-page/products/tws-2nd-single-album-to-us-beyond-ver-signed",
     "https://hello82.com/products/signed-ateez-golden-hour-part-6-digipack",
     "https://hello82.com/products/signed-ateez-golden-hour-part-6-digipack-unit",
+    "https://kplaceshop.com/products/ateez-plush-keyring-outfit-wish-cloak-ver-aniteez-in-dreamland-official-md",
 ]
 
 # Weverse Shop 商品
